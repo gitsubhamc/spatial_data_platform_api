@@ -7,7 +7,7 @@ class PointModel(BaseModel):
     type: str = "Point"
     coordinates: List[float]
 
-class MultiPolygonModel(BaseModel):
+class PolygonModel(BaseModel):
     type: str = "Polygon"
     coordinates: List[float]
 
@@ -17,4 +17,4 @@ class SpatialPointDataModel(BaseModel):
 
 class SpatialPolygonDataModel(BaseModel):
     name: str
-    geometry: MultiPolygonModel
+    geometry: PolygonModel
